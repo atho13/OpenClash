@@ -24,16 +24,27 @@ jobs:
         id: version
         run: |
           echo "version=$(grep 'PKG_VERSION:=' ./luci-app-openclash/Makefile |awk -F '=' '{print $2}')" >> $GITHUB_OUTPUT
-
-      - name: Clone Repository
+      
+      - name: Clone Repository Hulu (Vernesong Upstream)
         uses: actions/checkout@v6
         with:
+          repository: vernesong/OpenClash
           ref: package
 
       - name: Current Version
         id: current_version
         run: |
-          echo "version=$(sed -n 1p ./${{ github.ref_name }}/version |awk -F 'v' '{print $2}')" >> $GITHUB_OUTPUT
+          echo "version=$(sed -n 1p ./version | awk -F 'v' '{print $2}')" >> $GITHUB_OUTPUT
+          
+      #- name: Clone Repository
+        #uses: actions/checkout@v6
+        #with:
+          #ref: package
+
+      #- name: Current Version
+        #id: current_version
+        #run: |
+          #echo "version=$(sed -n 1p ./${{ github.ref_name }}/version |awk -F 'v' '{print $2}')" >> $GITHUB_OUTPUT
 
   Compile:
     runs-on: ubuntu-latest
