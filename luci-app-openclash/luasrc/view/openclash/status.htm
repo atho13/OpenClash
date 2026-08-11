@@ -16,14 +16,6 @@
         <td colspan="4">
             <div class="oc">
                 <div class="main-cards-container">
-                    <div class="announcement-card">
-                        <div id="announcement-banner" class="announcement-banner">
-                            <div class="megaphone-container">
-                                <svg id="megaphone" width="15" height="15"><use href="#oc-icon-megaphone"/></svg>
-                            </div>
-                            <div id="announcement-content" class="announcement-content"></div>
-                        </div>
-                    </div>
                     <div class="main-card">
                         <!-- Row 1: Running Status -->
                         <div class="card-row full-width core-status-row">
@@ -66,11 +58,6 @@
                                         <svg id="moon-icon" width="14" height="14" class="oc-hidden"><use href="#oc-icon-moon"/></svg>
                                         <svg id="auto-icon" width="14" height="14" class="oc-hidden"><use href="#oc-icon-auto-theme"/></svg>
                                     </button>
-                                    <button type="button" class="icon-btn action-btn" id="go_wiki" title="<%:Wiki%>" onclick="return wikipage()"><svg width="14" height="14"><use href="#oc-icon-wiki"/></svg></button>
-                                    <button type="button" class="icon-btn action-btn" id="go_tutorials" title="<%:Tutorials%>" onclick="return gitbookpage()"><svg width="14" height="14"><use href="#oc-icon-book"/></svg></button>
-                                    <button type="button" class="icon-btn action-btn" id="go_star" title="<%:Star%>" onclick="return homepage()"><svg width="14" height="14"><use href="#oc-icon-star"/></svg></button>
-                                    <button type="button" class="icon-btn action-btn" id="go_telegram" title="<%:Telegram%>" onclick="return telegrampage()"><svg width="14" height="14"><use href="#oc-icon-telegram"/></svg></button>
-                                    <button type="button" class="icon-btn action-btn" id="go_sponsor" title="<%:Sponsor%>" onclick="return sponsorpage()"><svg width="14" height="14"><use href="#oc-icon-heart"/></svg></button>
                                     <button type="button" class="icon-btn action-btn" id="logo_btn" title="Mihomo" onclick="return winOpen('https://www.github.com/metacubex/mihomo');">
                                         <img id="_logo" src="/luci-static/resources/openclash/img/logo.png?v=<%=plugin_version%>" loading="lazy" width="14px" height="14px" alt="Mihomo"/>
                                         <span class="logo-text">Powered by <span class="mihomo-link">Mihomo</span></span>
@@ -291,39 +278,6 @@
                         </div>
                     </div>
                 </div>
-
-            <!-- Usage Help Model -->
-            <div class="config-upload-model-overlay" id="usage-help-overlay">
-                <div class="config-upload-model usage-help-model" id="usage-help-model">
-                    <div class="config-upload-header">
-                        <div class="config-upload-title"><%:Usage Help%></div>
-                        <button type="button" class="icon-btn" onclick="UsageHelpManager.hide()">
-                            <svg width="14" height="14"><use href="#oc-icon-close"/></svg>
-                        </button>
-                    </div>
-                    <div class="config-upload-content">
-                        <div class="form-group">
-                            <label class="highlight-label"><%:Copy the following text to any AI (ChatGPT, DeepSeek, etc.) to get usage help for OpenClash:%></label>
-                            <textarea id="usage-help-textarea" class="form-textarea oc-hidden"></textarea>
-                            <div id="usage-help-editor"></div>
-                        </div>
-                    </div>
-                    <div class="config-upload-footer">
-                        <div class="config-upload-status" id="usage-help-status"></div>
-                        <div class="config-upload-buttons">
-                            <button type="button" class="btn cancel-btn" onclick="UsageHelpManager.hide()"><%:Cancel%></button>
-                            <button type="button" class="btn upload-btn" onclick="UsageHelpManager.copyAndHide()"><%:Copy%></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Usage Help Button -->
-            <div class="oc-usage-help-float" id="usage-help-float" title="<%:Usage Help%>" onclick="UsageHelpManager.show()">
-                <svg width="24" height="24"><use href="#oc-icon-usage-help"/></svg>
-                <span class="oc-usage-help-bubble" id="usage-help-bubble"><%:Click to get usage help%></span>
-            </div>
-            </div>
         </td>
     </tr>
 </table>
